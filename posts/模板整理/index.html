@@ -347,6 +347,21 @@
 </span></span></span><span style="display:flex;"><span><span style="color:#57606a"></span>ostream<span style="color:#0550ae">&amp;</span> <span style="color:#cf222e">operator</span><span style="color:#0550ae">&lt;&lt;</span><span style="color:#1f2328">(</span>ostream <span style="color:#0550ae">&amp;</span>os<span style="color:#1f2328">,</span> <span style="color:#cf222e">const</span> INT <span style="color:#0550ae">&amp;</span>v<span style="color:#1f2328">)</span> <span style="color:#1f2328">{</span> <span style="color:#cf222e">return</span> os <span style="color:#0550ae">&lt;&lt;</span> v<span style="color:#1f2328">.</span>toString<span style="color:#1f2328">();</span> <span style="color:#1f2328">}</span>
 </span></span><span style="display:flex;"><span>istream<span style="color:#0550ae">&amp;</span> <span style="color:#cf222e">operator</span><span style="color:#0550ae">&gt;&gt;</span><span style="color:#1f2328">(</span>istream <span style="color:#0550ae">&amp;</span>is<span style="color:#1f2328">,</span> INT <span style="color:#0550ae">&amp;</span>v<span style="color:#1f2328">)</span> <span style="color:#1f2328">{</span> string s<span style="color:#1f2328">;</span> is <span style="color:#0550ae">&gt;&gt;</span> s<span style="color:#1f2328">;</span> v<span style="color:#1f2328">.</span>read<span style="color:#1f2328">(</span>s<span style="color:#1f2328">);</span> <span style="color:#cf222e">return</span> is<span style="color:#1f2328">;</span> <span style="color:#1f2328">}</span>
 </span></span></code></pre></div></details>
+<h2 id="离散化">离散化</h2>
+<details>
+<summary>code</summary>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c++" data-lang="c++"><span style="display:flex;"><span>vector<span style="color:#0550ae">&lt;</span><span style="color:#cf222e">int</span><span style="color:#0550ae">&gt;</span> a<span style="color:#1f2328">(</span>n<span style="color:#0550ae">+</span><span style="color:#0550ae">1</span><span style="color:#1f2328">),</span>b<span style="color:#1f2328">(</span>n<span style="color:#0550ae">+</span><span style="color:#0550ae">1</span><span style="color:#1f2328">);</span>
+</span></span><span style="display:flex;"><span><span style="color:#cf222e">for</span><span style="color:#1f2328">(</span><span style="color:#cf222e">int</span> i<span style="color:#0550ae">=</span><span style="color:#0550ae">1</span><span style="color:#1f2328">;</span>i<span style="color:#0550ae">&lt;=</span>n<span style="color:#1f2328">;</span>i<span style="color:#0550ae">++</span><span style="color:#1f2328">)</span> cin<span style="color:#0550ae">&gt;&gt;</span>a<span style="color:#1f2328">[</span>i<span style="color:#1f2328">],</span>b<span style="color:#1f2328">[</span>i<span style="color:#1f2328">]</span><span style="color:#0550ae">=</span>a<span style="color:#1f2328">[</span>i<span style="color:#1f2328">];</span>
+</span></span><span style="display:flex;"><span>sort<span style="color:#1f2328">(</span>b<span style="color:#1f2328">.</span>begin<span style="color:#1f2328">()</span><span style="color:#0550ae">+</span><span style="color:#0550ae">1</span><span style="color:#1f2328">,</span>b<span style="color:#1f2328">.</span>end<span style="color:#1f2328">());</span>
+</span></span><span style="display:flex;"><span><span style="color:#cf222e">auto</span> end<span style="color:#0550ae">=</span>unique<span style="color:#1f2328">(</span>b<span style="color:#1f2328">.</span>begin<span style="color:#1f2328">()</span><span style="color:#0550ae">+</span><span style="color:#0550ae">1</span><span style="color:#1f2328">,</span>b<span style="color:#1f2328">.</span>end<span style="color:#1f2328">());</span>
+</span></span><span style="display:flex;"><span><span style="color:#cf222e">for</span><span style="color:#1f2328">(</span><span style="color:#cf222e">int</span> i<span style="color:#0550ae">=</span><span style="color:#0550ae">1</span><span style="color:#1f2328">;</span>i<span style="color:#0550ae">&lt;+</span>n<span style="color:#1f2328">;</span>i<span style="color:#0550ae">++</span><span style="color:#1f2328">)</span>
+</span></span><span style="display:flex;"><span>  a<span style="color:#1f2328">[</span>i<span style="color:#1f2328">]</span><span style="color:#0550ae">=</span>lower_bound<span style="color:#1f2328">(</span>b<span style="color:#1f2328">.</span>begin<span style="color:#1f2328">()</span><span style="color:#0550ae">+</span><span style="color:#0550ae">1</span><span style="color:#1f2328">,</span>end<span style="color:#1f2328">,</span>a<span style="color:#1f2328">[</span>i<span style="color:#1f2328">]);</span>
+</span></span></code></pre></div></details>
+<blockquote>
+<p>end为unique后序列的(末尾迭代器+1)，之后还储存着无用元素<br>
+可用lower_bound指定范围忽视掉</p>
+</blockquote>
+
         </section>
         <div class="post-tags">
           
@@ -370,6 +385,7 @@
         <nav id="TableOfContents">
   <ol>
     <li><a href="#高精度">高精度</a></li>
+    <li><a href="#离散化">离散化</a></li>
   </ol>
 </nav>
       </div>

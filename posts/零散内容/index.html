@@ -75,8 +75,24 @@
 <p>则：C：x&ndash;&gt; $\lfloor \frac{(x-b)}{k} \rfloor$</p>
 <p>具体证明：考虑A,B的运算的单调性可逆性，和组合起来的单调性可逆性</p>
 <blockquote>
-<p>实则完全没有必要：n&lt;20，，</p>
+<p>实则完全没有必要：n&lt;20</p>
 </blockquote>
+<h2 id="cf2149e"><a href="https://codeforces.com/contest/2149/problem/E">CF2149E:</a></h2>
+<p>three-pointer:p2,p3对应最近最远的不同值个数为m的区间</p>
+<p>$1<a_i<10^9$ -&gt; <code>int cnt[(int)1e9+7]</code>+<code>memset()</code>=<code>TLE</code>+<code>MLE</code></p>
+<blockquote>
+<p>memset为O(n)，使用需谨慎，且最好放前面</p>
+</blockquote>
+<p>解决方法：</p>
+<ul>
+<li>离散化：将ai映射到$[1,n]$上，序关系不变，对每一个区间而言，其不等元素数不变，故映射后答案不变。此时<code>int cnt[(int)2e5+7]</code>+<code>memset()</code>在时间空间上都是可行的</li>
+<li>使用<code>map&lt;int,int&gt;</code>：空间优化，时间多个<code>log</code>，不过可过数据</li>
+</ul>
+<h2 id="buaa-e6-i"><a href="https://accoding.buaa.edu.cn/contest-ng/index.html#/1246/problems">BUAA-E6-I:</a></h2>
+<p>上题的改版</p>
+<p>需注意若不离散化+<code>memset</code>，在空间上可行的但在时间上是不可行的</p>
+<p>只需将序列中的值对应的cnt清零即可，时间上得到优化可过</p>
+<p>注意到单调性+可反向验证=&gt;构造check,用二分找到答案所在的美丽值</p>
         </section>
         <div class="post-tags">
           
@@ -102,6 +118,8 @@
         <nav id="TableOfContents">
   <ol>
     <li><a href="#cf2156b">CF2156B:</a></li>
+    <li><a href="#cf2149e">CF2149E:</a></li>
+    <li><a href="#buaa-e6-i">BUAA-E6-I:</a></li>
   </ol>
 </nav>
       </div>

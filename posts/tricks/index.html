@@ -2,15 +2,14 @@
 <html><head lang="en">
 	<meta charset="utf-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>Tricks from CF - 碎片</title><meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="description" content="​
-模板化仅仅是为了提速，打开思维是首要的
+	<meta name="description" content="模板化仅仅是为了提速，打开思维是首要的
 等价/更优变换贪心：
 存在一种变换策略，使得当前方案等价或更优" />
 	<meta property="og:image" content=""/>
 	<meta property="og:url" content="https://k4leidoscope.github.io/posts/tricks/">
   <meta property="og:site_name" content="碎片">
   <meta property="og:title" content="Tricks from CF">
-  <meta property="og:description" content="​ 模板化仅仅是为了提速，打开思维是首要的
+  <meta property="og:description" content="模板化仅仅是为了提速，打开思维是首要的
 等价/更优变换贪心： 存在一种变换策略，使得当前方案等价或更优">
   <meta property="og:locale" content="zh_cn">
   <meta property="og:type" content="article">
@@ -21,7 +20,7 @@
 
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Tricks from CF">
-  <meta name="twitter:description" content="​ 模板化仅仅是为了提速，打开思维是首要的
+  <meta name="twitter:description" content="模板化仅仅是为了提速，打开思维是首要的
 等价/更优变换贪心： 存在一种变换策略，使得当前方案等价或更优">
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@1,500&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap" rel="stylesheet">
@@ -72,8 +71,7 @@
         </div>
         
         <section class="body">
-          <p>​
-模板化仅仅是为了提速，打开思维是首要的</p>
+          <p>模板化仅仅是为了提速，打开思维是首要的</p>
 <h3 id="等价更优变换贪心">等价/更优变换贪心：</h3>
 <p>存在一种变换策略，使得当前方案等价或更优</p>
 <p>对任意一种方案采取该策略，均得到具有某种特征的局面</p>
@@ -86,6 +84,12 @@
 <li>p1移动后，p2从上一次的位置开始移动，在O(n)内可得到所有区间</li>
 <li>信息论的角度：相当于利用单调不减的性质，利用上一次p2的位置信息，对信息的利用更加充分</li>
 </ul>
+<h3 id="离散化">离散化：</h3>
+<p>O(nlogn)的值域映射（hash：(O(1)映射)）</p>
+<p>{ai}放在数轴上，从左往右依次标号1,2,3&hellip;n，即映射的结果</p>
+<p>值域：[min{ai},max{ai}]-&gt;[1,card{ai}]</p>
+<p>映射后序关系保持不变，对于答案只与大小关系相关，与具体数值无关的题目，可研究映射后的情况</p>
+<p>离散化映射后缩减了值域，有助于优化算法的时间和空间</p>
         </section>
         <div class="post-tags">
           
