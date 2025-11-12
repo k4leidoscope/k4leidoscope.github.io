@@ -7,8 +7,15 @@
     <generator>Hugo</generator>
     <language>zh-cn</language>
     <copyright>Kaleidoscope</copyright>
-    <lastBuildDate>Tue, 28 Oct 2025 23:53:03 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 12 Nov 2025 22:57:01 +0800</lastBuildDate>
     <atom:link href="https://k4leidoscope.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>纯粹性</title>
+      <link>https://k4leidoscope.github.io/posts/%E7%BA%AF%E7%B2%B9%E6%80%A7/</link>
+      <pubDate>Wed, 12 Nov 2025 22:57:01 +0800</pubDate>
+      <guid>https://k4leidoscope.github.io/posts/%E7%BA%AF%E7%B2%B9%E6%80%A7/</guid>
+      <description>&lt;p&gt;在追寻纯粹性时所收获的快乐是无与伦比的&#xA;​&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Tricks from C&#43;&#43;</title>
       <link>https://k4leidoscope.github.io/posts/c&#43;&#43;tricks/</link>
