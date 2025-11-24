@@ -16,12 +16,5 @@
       <guid>https://k4leidoscope.github.io/posts/%E9%9B%B6%E6%95%A3%E5%86%85%E5%AE%B9/</guid>
       <description>&lt;h2 id=&#34;cf2156b&#34;&gt;&lt;a href=&#34;https://codeforces.com/contest/2156/problem/B&#34;&gt;CF2156B:&lt;/a&gt;&lt;/h2&gt;</description>
     </item>
-    <item>
-      <title>Tricks from CF</title>
-      <link>https://k4leidoscope.github.io/posts/tricks/</link>
-      <pubDate>Sat, 25 Oct 2025 17:26:53 +0800</pubDate>
-      <guid>https://k4leidoscope.github.io/posts/tricks/</guid>
-      <description>&lt;p&gt;模板化仅仅是为了提速，打开思维是首要的&lt;/p&gt;&#xA;&lt;h3 id=&#34;等价更优变换贪心&#34;&gt;等价/更优变换贪心：&lt;/h3&gt;&#xA;&lt;p&gt;存在一种变换策略，使得当前方案等价或更优&lt;/p&gt;</description>
-    </item>
   </channel>
 </rss>

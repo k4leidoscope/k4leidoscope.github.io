@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html><head lang="en">
 	<meta charset="utf-8" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>Tricks from C&#43;&#43; - 碎片</title><meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="description" content="Lambda表达式：
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>C Plus Plus Tricks in Competitive Programming - 碎片</title><meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Lambda
 在函数内定义伪函数，便于传递给函数指针作为参数的其他函数
 ACM中利用其引用特性可优雅地处理局部变量，或者创建用于交互的函数
 auto ask = [&amp;](int i, int x) -&gt; int {
@@ -17,55 +17,35 @@ PS:[&amp;]表示捕获引用（直接访问定义匿名函数的函数中的局�
 [=]表示捕获值，在创建lambda表达式时内部创建捕获变量的拷贝，后续调用时亦是访问拷贝中的内容
 -&gt;int是可省的，c&#43;&#43;11以上编译可推断返回类型
 
-Stackoverflow:
-void f() {
-  static int a[100000000];
-}
-将局部变量和全局变量一样放在静态区
-而非栈内（只有几Mb的空间限制），有效防止栈溢出
-且提高CF题目代码效率，这样只有其他函数需共用全局变量时才用定义全局变量
-STL:
-Vector:
-时间复杂度和用数组维护是相当的
-除insert()，erase()外基本是常数级别
-其长度可变，实时的增删，遍历，按下标访问，初始化很方便
-ACM中可用于维护集合增减和方便地遍历
-for(auto item: items){}  //按内部元素进行遍历
-vector a(100,0);  //初始化为100个0
+STL
+Vector
+
+push_back: 倍增方式增加内存，开辟内存和拷贝是$O(m)$的，$2&#43;4&#43;8&#43;...=O(n)$，均摊为O(1)
+预留大小（倍增开出的总内存）：capacity() reserve()
+占用大小（实际使用的大小）：size() resize() PS:resize不会改变预留大小
+特殊遍历方式
+emplace_back在实现上效率是优于push_back的
 " />
 	<meta property="og:image" content=""/>
 	<meta property="og:url" content="https://k4leidoscope.github.io/posts/c&#43;&#43;tricks/">
   <meta property="og:site_name" content="碎片">
-  <meta property="og:title" content="Tricks from C&#43;&#43;">
-  <meta property="og:description" content="Lambda表达式： 在函数内定义伪函数，便于传递给函数指针作为参数的其他函数
+  <meta property="og:title" content="C Plus Plus Tricks in Competitive Programming">
+  <meta property="og:description" content="Lambda 在函数内定义伪函数，便于传递给函数指针作为参数的其他函数
 ACM中利用其引用特性可优雅地处理局部变量，或者创建用于交互的函数
-auto ask = [&amp;](int i, int x) -&gt; int { cout &lt;&lt; &#34;? &#34; &lt;&lt; (i&#43;1) &lt;&lt; &#39; &#39; &lt;&lt; x &lt;&lt; &#39;\n&#39;; cout &lt;&lt; flush; int val; cin &gt;&gt; val; return val; }; PS:[&amp;]表示捕获引用（直接访问定义匿名函数的函数中的局部变量） [=]表示捕获值，在创建lambda表达式时内部创建捕获变量的拷贝，后续调用时亦是访问拷贝中的内容 -&gt;int是可省的，c&#43;&#43;11以上编译可推断返回类型 Stackoverflow: void f() { static int a[100000000]; } 将局部变量和全局变量一样放在静态区
-而非栈内（只有几Mb的空间限制），有效防止栈溢出
-且提高CF题目代码效率，这样只有其他函数需共用全局变量时才用定义全局变量
-STL: Vector: 时间复杂度和用数组维护是相当的
-除insert()，erase()外基本是常数级别
-其长度可变，实时的增删，遍历，按下标访问，初始化很方便
-ACM中可用于维护集合增减和方便地遍历
-for(auto item: items){} //按内部元素进行遍历 vector a(100,0); //初始化为100个0">
+auto ask = [&amp;](int i, int x) -&gt; int { cout &lt;&lt; &#34;? &#34; &lt;&lt; (i&#43;1) &lt;&lt; &#39; &#39; &lt;&lt; x &lt;&lt; &#39;\n&#39;; cout &lt;&lt; flush; int val; cin &gt;&gt; val; return val; }; PS:[&amp;]表示捕获引用（直接访问定义匿名函数的函数中的局部变量） [=]表示捕获值，在创建lambda表达式时内部创建捕获变量的拷贝，后续调用时亦是访问拷贝中的内容 -&gt;int是可省的，c&#43;&#43;11以上编译可推断返回类型 STL Vector push_back: 倍增方式增加内存，开辟内存和拷贝是$O(m)$的，$2&#43;4&#43;8&#43;...=O(n)$，均摊为O(1) 预留大小（倍增开出的总内存）：capacity() reserve() 占用大小（实际使用的大小）：size() resize() PS:resize不会改变预留大小 特殊遍历方式 emplace_back在实现上效率是优于push_back的">
   <meta property="og:locale" content="zh_cn">
   <meta property="og:type" content="article">
     <meta property="article:section" content="posts">
     <meta property="article:published_time" content="2025-10-28T23:53:03+08:00">
     <meta property="article:modified_time" content="2025-10-28T23:53:03+08:00">
     <meta property="article:tag" content="C&#43;&#43;">
+    <meta property="article:tag" content="Cc">
 
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Tricks from C&#43;&#43;">
-  <meta name="twitter:description" content="Lambda表达式： 在函数内定义伪函数，便于传递给函数指针作为参数的其他函数
+  <meta name="twitter:title" content="C Plus Plus Tricks in Competitive Programming">
+  <meta name="twitter:description" content="Lambda 在函数内定义伪函数，便于传递给函数指针作为参数的其他函数
 ACM中利用其引用特性可优雅地处理局部变量，或者创建用于交互的函数
-auto ask = [&amp;](int i, int x) -&gt; int { cout &lt;&lt; &#34;? &#34; &lt;&lt; (i&#43;1) &lt;&lt; &#39; &#39; &lt;&lt; x &lt;&lt; &#39;\n&#39;; cout &lt;&lt; flush; int val; cin &gt;&gt; val; return val; }; PS:[&amp;]表示捕获引用（直接访问定义匿名函数的函数中的局部变量） [=]表示捕获值，在创建lambda表达式时内部创建捕获变量的拷贝，后续调用时亦是访问拷贝中的内容 -&gt;int是可省的，c&#43;&#43;11以上编译可推断返回类型 Stackoverflow: void f() { static int a[100000000]; } 将局部变量和全局变量一样放在静态区
-而非栈内（只有几Mb的空间限制），有效防止栈溢出
-且提高CF题目代码效率，这样只有其他函数需共用全局变量时才用定义全局变量
-STL: Vector: 时间复杂度和用数组维护是相当的
-除insert()，erase()外基本是常数级别
-其长度可变，实时的增删，遍历，按下标访问，初始化很方便
-ACM中可用于维护集合增减和方便地遍历
-for(auto item: items){} //按内部元素进行遍历 vector a(100,0); //初始化为100个0">
+auto ask = [&amp;](int i, int x) -&gt; int { cout &lt;&lt; &#34;? &#34; &lt;&lt; (i&#43;1) &lt;&lt; &#39; &#39; &lt;&lt; x &lt;&lt; &#39;\n&#39;; cout &lt;&lt; flush; int val; cin &gt;&gt; val; return val; }; PS:[&amp;]表示捕获引用（直接访问定义匿名函数的函数中的局部变量） [=]表示捕获值，在创建lambda表达式时内部创建捕获变量的拷贝，后续调用时亦是访问拷贝中的内容 -&gt;int是可省的，c&#43;&#43;11以上编译可推断返回类型 STL Vector push_back: 倍增方式增加内存，开辟内存和拷贝是$O(m)$的，$2&#43;4&#43;8&#43;...=O(n)$，均摊为O(1) 预留大小（倍增开出的总内存）：capacity() reserve() 占用大小（实际使用的大小）：size() resize() PS:resize不会改变预留大小 特殊遍历方式 emplace_back在实现上效率是优于push_back的">
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@1,500&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
@@ -110,12 +90,12 @@ for(auto item: items){} //按内部元素进行遍历 vector a(100,0); //初始�
       
       <div class="post-content">
         <div class="title">
-          <h1 class="title">Tricks from C&#43;&#43;</h1>
+          <h1 class="title">C Plus Plus Tricks in Competitive Programming</h1>
           <div class="meta">Posted on Oct 28, 2025</div>
         </div>
         
         <section class="body">
-          <h2 id="lambda表达式">Lambda表达式：</h2>
+          <h2 id="lambda">Lambda</h2>
 <p>在函数内定义伪函数，便于传递给函数指针作为参数的其他函数</p>
 <p>ACM中利用其引用特性可优雅地处理局部变量，或者创建用于交互的函数</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#cf222e">auto</span> ask <span style="color:#0550ae">=</span> <span style="color:#1f2328">[</span><span style="color:#0550ae">&amp;</span><span style="color:#1f2328">](</span><span style="color:#cf222e">int</span> i<span style="color:#1f2328">,</span> <span style="color:#cf222e">int</span> x<span style="color:#1f2328">)</span> <span style="color:#0550ae">-&gt;</span> <span style="color:#cf222e">int</span> <span style="color:#1f2328">{</span>
@@ -130,22 +110,16 @@ for(auto item: items){} //按内部元素进行遍历 vector a(100,0); //初始�
 <li>[=]表示捕获值，在创建lambda表达式时内部创建捕获变量的拷贝，后续调用时亦是访问拷贝中的内容</li>
 <li>-&gt;int是可省的，c++11以上编译可推断返回类型</li>
 </ul>
-<h2 id="stackoverflow">Stackoverflow:</h2>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#cf222e">void</span> <span style="color:#6639ba">f</span><span style="color:#1f2328">()</span> <span style="color:#1f2328">{</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#cf222e">static</span> <span style="color:#cf222e">int</span> a<span style="color:#1f2328">[</span><span style="color:#0550ae">100000000</span><span style="color:#1f2328">];</span>
-</span></span><span style="display:flex;"><span><span style="color:#1f2328">}</span>
-</span></span></code></pre></div><p>将局部变量和全局变量一样放在静态区</p>
-<p>而非栈内（只有几Mb的空间限制），有效防止栈溢出</p>
-<p>且提高CF题目代码效率，这样只有其他函数需共用全局变量时才用定义全局变量</p>
-<h2 id="stl">STL:</h2>
-<h3 id="vector">Vector:</h3>
-<p>时间复杂度和用数组维护是相当的</p>
-<p>除<code>insert()</code>，<code>erase()</code>外基本是常数级别</p>
-<p>其长度可变，实时的增删，遍历，按下标访问，初始化很方便</p>
-<p>ACM中可用于维护集合增减和方便地遍历</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#cf222e">for</span><span style="color:#1f2328">(</span><span style="color:#cf222e">auto</span> <span style="color:#900;font-weight:bold">item</span><span style="color:#1f2328">:</span> items<span style="color:#1f2328">){}</span>  <span style="color:#57606a">//按内部元素进行遍历
-</span></span></span><span style="display:flex;"><span><span style="color:#57606a"></span>vector <span style="color:#6639ba">a</span><span style="color:#1f2328">(</span><span style="color:#0550ae">100</span><span style="color:#1f2328">,</span><span style="color:#0550ae">0</span><span style="color:#1f2328">);</span>  <span style="color:#57606a">//初始化为100个0
-</span></span></span></code></pre></div>
+<h2 id="stl">STL</h2>
+<h3 id="vector">Vector</h3>
+<ul>
+<li><code>push_back</code>: 倍增方式增加内存，开辟内存和拷贝是$O(m)$的，$2+4+8+...=O(n)$，均摊为O(1)</li>
+<li>预留大小（倍增开出的总内存）：<code>capacity()</code> <code>reserve()</code></li>
+<li>占用大小（实际使用的大小）：<code>size()</code> <code>resize()</code> PS:<code>resize</code>不会改变预留大小</li>
+<li>特殊遍历方式</li>
+<li><code>emplace_back</code>在实现上效率是优于<code>push_back</code>的</li>
+</ul>
+
         </section>
         <div class="post-tags">
           
@@ -154,6 +128,8 @@ for(auto item: items){} //按内部元素进行遍历 vector a(100,0); //初始�
             <ul class="tags">
               
               <li><a href="/tags/c&#43;&#43;">c&#43;&#43;</a></li>
+              
+              <li><a href="/tags/cc">cc</a></li>
               
             </ul>
           </nav>
