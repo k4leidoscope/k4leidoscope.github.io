@@ -93,12 +93,13 @@
 <h3 id="代码风格">代码风格</h3>
 <p>多组数据涉及的问题</p>
 <p>全局变量失去了一个优势，即初始值为零</p>
-<p>而<code>vector</code>本身也是放在堆上的，所以理论上vector可完全平替掉数组</p>
-<p>不过STL总归是用着很不舒服，于是暂定代码风格如下：</p>
+<p>而<code>vector</code>本身也是放在堆上的，且<code>vector</code>亦可方便的初始化，且提前<code>reserve</code>/<code>resize</code>/<code>assign</code>可避免指数级增长的内存，所以理论上<code>vector</code>可完完全全平替掉数组</p>
+<p>不过尊崇国内OI遗风，规定代码风格如下</p>
 <p>多组数据时：</p>
-<p>变量定义在函数内，需用大数组时：用static关键字将其放在堆上</p>
-<p>维护集合的增加时：vector(相当于只利用其长度可变的优势)</p>
-<p>功能简单的函数，局部lambda定义即可</p>
+<p>基本全用 <code>vector</code>，除开：多维数组(<code>static</code>+<code>memset</code>)</p>
+<p>注意提前分配内存，这样每次push_back的时间和空间才是O(1)的</p>
+<p>功能简单的函数，局部<code>lambda</code>定义即可</p>
+<p>OI风格的单组数据：基本用数组，除开：维护可变数组（集合）</p>
 <h3 id="递归传递string的优化">递归传递string的优化</h3>
 <p>1.0: <code>foo(const string&amp; t)</code>：引用传值+不会修改父函数string</p>
 <p>2.0: <code>string cur</code> <code>cur.append()</code> <code>cur.resize()</code>：外部去维护string</p>

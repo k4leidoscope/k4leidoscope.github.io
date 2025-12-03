@@ -28,14 +28,25 @@ emplace_back在实现上效率是优于push_back的
 
 
 提前reserve assign有助于优化时间和空间常数
-" />
+
+lower_bound &amp;&amp; upper_bound
+返回大于等于的1分界点 &amp;&amp; 返回大于的1分界点
+accumulate
+方便的求和
+accumulate(1&#43;all(a),0LL)：用longlong累加a[1]-&gt;a[n]
+max_element
+max_element(1&#43;all(a))：返回a[1]-&gt;a[n]第一个最大元素的迭代器" />
 	<meta property="og:image" content=""/>
 	<meta property="og:url" content="https://k4leidoscope.github.io/posts/c&#43;&#43;tricks/">
   <meta property="og:site_name" content="碎片">
   <meta property="og:title" content="C Plus Plus Tricks in Competitive Programming">
   <meta property="og:description" content="Lambda 在函数内定义伪函数，便于传递给函数指针作为参数的其他函数
 ACM中利用其引用特性可优雅地处理局部变量，或者创建用于交互的函数
-auto ask = [&amp;](int i, int x) -&gt; int { cout &lt;&lt; &#34;? &#34; &lt;&lt; (i&#43;1) &lt;&lt; &#39; &#39; &lt;&lt; x &lt;&lt; &#39;\n&#39;; cout &lt;&lt; flush; int val; cin &gt;&gt; val; return val; }; PS:[&amp;]表示捕获引用（直接访问定义匿名函数的函数中的局部变量） [=]表示捕获值，在创建lambda表达式时内部创建捕获变量的拷贝，后续调用时亦是访问拷贝中的内容 -&gt;int是可省的，c&#43;&#43;11以上编译可推断返回类型 STL Vector push_back: 倍增方式增加内存，开辟内存和拷贝是$O(m)$的，$2&#43;4&#43;8&#43;...=O(n)$，均摊为O(1) 预留大小（倍增开出的总内存）：capacity() reserve() 占用大小（实际使用的大小）：size() resize() assign PS:resize不会减小预留大小 特殊遍历方式 emplace_back在实现上效率是优于push_back的 提前reserve assign有助于优化时间和空间常数">
+auto ask = [&amp;](int i, int x) -&gt; int { cout &lt;&lt; &#34;? &#34; &lt;&lt; (i&#43;1) &lt;&lt; &#39; &#39; &lt;&lt; x &lt;&lt; &#39;\n&#39;; cout &lt;&lt; flush; int val; cin &gt;&gt; val; return val; }; PS:[&amp;]表示捕获引用（直接访问定义匿名函数的函数中的局部变量） [=]表示捕获值，在创建lambda表达式时内部创建捕获变量的拷贝，后续调用时亦是访问拷贝中的内容 -&gt;int是可省的，c&#43;&#43;11以上编译可推断返回类型 STL Vector push_back: 倍增方式增加内存，开辟内存和拷贝是$O(m)$的，$2&#43;4&#43;8&#43;...=O(n)$，均摊为O(1) 预留大小（倍增开出的总内存）：capacity() reserve() 占用大小（实际使用的大小）：size() resize() assign PS:resize不会减小预留大小 特殊遍历方式 emplace_back在实现上效率是优于push_back的 提前reserve assign有助于优化时间和空间常数
+lower_bound &amp;&amp; upper_bound 返回大于等于的1分界点 &amp;&amp; 返回大于的1分界点
+accumulate 方便的求和
+accumulate(1&#43;all(a),0LL)：用longlong累加a[1]-&gt;a[n]
+max_element max_element(1&#43;all(a))：返回a[1]-&gt;a[n]第一个最大元素的迭代器">
   <meta property="og:locale" content="zh_cn">
   <meta property="og:type" content="article">
     <meta property="article:section" content="posts">
@@ -48,7 +59,11 @@ auto ask = [&amp;](int i, int x) -&gt; int { cout &lt;&lt; &#34;? &#34; &lt;&lt;
   <meta name="twitter:title" content="C Plus Plus Tricks in Competitive Programming">
   <meta name="twitter:description" content="Lambda 在函数内定义伪函数，便于传递给函数指针作为参数的其他函数
 ACM中利用其引用特性可优雅地处理局部变量，或者创建用于交互的函数
-auto ask = [&amp;](int i, int x) -&gt; int { cout &lt;&lt; &#34;? &#34; &lt;&lt; (i&#43;1) &lt;&lt; &#39; &#39; &lt;&lt; x &lt;&lt; &#39;\n&#39;; cout &lt;&lt; flush; int val; cin &gt;&gt; val; return val; }; PS:[&amp;]表示捕获引用（直接访问定义匿名函数的函数中的局部变量） [=]表示捕获值，在创建lambda表达式时内部创建捕获变量的拷贝，后续调用时亦是访问拷贝中的内容 -&gt;int是可省的，c&#43;&#43;11以上编译可推断返回类型 STL Vector push_back: 倍增方式增加内存，开辟内存和拷贝是$O(m)$的，$2&#43;4&#43;8&#43;...=O(n)$，均摊为O(1) 预留大小（倍增开出的总内存）：capacity() reserve() 占用大小（实际使用的大小）：size() resize() assign PS:resize不会减小预留大小 特殊遍历方式 emplace_back在实现上效率是优于push_back的 提前reserve assign有助于优化时间和空间常数">
+auto ask = [&amp;](int i, int x) -&gt; int { cout &lt;&lt; &#34;? &#34; &lt;&lt; (i&#43;1) &lt;&lt; &#39; &#39; &lt;&lt; x &lt;&lt; &#39;\n&#39;; cout &lt;&lt; flush; int val; cin &gt;&gt; val; return val; }; PS:[&amp;]表示捕获引用（直接访问定义匿名函数的函数中的局部变量） [=]表示捕获值，在创建lambda表达式时内部创建捕获变量的拷贝，后续调用时亦是访问拷贝中的内容 -&gt;int是可省的，c&#43;&#43;11以上编译可推断返回类型 STL Vector push_back: 倍增方式增加内存，开辟内存和拷贝是$O(m)$的，$2&#43;4&#43;8&#43;...=O(n)$，均摊为O(1) 预留大小（倍增开出的总内存）：capacity() reserve() 占用大小（实际使用的大小）：size() resize() assign PS:resize不会减小预留大小 特殊遍历方式 emplace_back在实现上效率是优于push_back的 提前reserve assign有助于优化时间和空间常数
+lower_bound &amp;&amp; upper_bound 返回大于等于的1分界点 &amp;&amp; 返回大于的1分界点
+accumulate 方便的求和
+accumulate(1&#43;all(a),0LL)：用longlong累加a[1]-&gt;a[n]
+max_element max_element(1&#43;all(a))：返回a[1]-&gt;a[n]第一个最大元素的迭代器">
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@1,500&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
@@ -125,6 +140,13 @@ auto ask = [&amp;](int i, int x) -&gt; int { cout &lt;&lt; &#34;? &#34; &lt;&lt;
 <blockquote>
 <p>提前reserve assign有助于优化时间和空间常数</p>
 </blockquote>
+<h3 id="lower_bound--upper_bound">lower_bound &amp;&amp; upper_bound</h3>
+<p>返回大于等于的1分界点 &amp;&amp; 返回大于的1分界点</p>
+<h3 id="accumulate">accumulate</h3>
+<p>方便的求和</p>
+<p><code>accumulate(1+all(a),0LL)</code>：用longlong累加a[1]-&gt;a[n]</p>
+<h3 id="max_element">max_element</h3>
+<p><code>max_element(1+all(a))</code>：返回a[1]-&gt;a[n]第一个最大元素的迭代器</p>
 
         </section>
         <div class="post-tags">
