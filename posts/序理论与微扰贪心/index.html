@@ -2,16 +2,16 @@
 <html><head lang="en">
 	<meta charset="utf-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>序理论与微扰贪心 - 碎片</title><meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="description" content="序理论：
-定义与STL：
-严格全序：
+	<meta name="description" content="序理论
+定义与STL
+严格全序
 $a \prec b$：连接性，传递性，非对称性
 用sort可求出唯一的序列，使得：任取序列前后两元素a，b，有$a \prec b$成立" />
 	<meta property="og:image" content=""/>
 	<meta property="og:url" content="https://k4leidoscope.github.io/posts/%E5%BA%8F%E7%90%86%E8%AE%BA%E4%B8%8E%E5%BE%AE%E6%89%B0%E8%B4%AA%E5%BF%83/">
   <meta property="og:site_name" content="碎片">
   <meta property="og:title" content="序理论与微扰贪心">
-  <meta property="og:description" content="序理论： 定义与STL： 严格全序： $a \prec b$：连接性，传递性，非对称性
+  <meta property="og:description" content="序理论 定义与STL 严格全序 $a \prec b$：连接性，传递性，非对称性
 用sort可求出唯一的序列，使得：任取序列前后两元素a，b，有$a \prec b$成立">
   <meta property="og:locale" content="zh_cn">
   <meta property="og:type" content="article">
@@ -23,14 +23,14 @@ $a \prec b$：连接性，传递性，非对称性
 
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="序理论与微扰贪心">
-  <meta name="twitter:description" content="序理论： 定义与STL： 严格全序： $a \prec b$：连接性，传递性，非对称性
+  <meta name="twitter:description" content="序理论 定义与STL 严格全序 $a \prec b$：连接性，传递性，非对称性
 用sort可求出唯一的序列，使得：任取序列前后两元素a，b，有$a \prec b$成立">
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@1,500&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
 
 	
-	<link rel="stylesheet" type="text/css" media="screen" href="https://k4leidoscope.github.io/css/main.e00e2acdcecae8eb0d16d8c5f8ef4a44429b2c6463fc07b144b4296e82dc7973.css" /><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.css">
+	<link rel="stylesheet" type="text/css" media="screen" href="https://k4leidoscope.github.io/css/main.2c816e5b87086af353368b913c521905f676d8a5b67a494589639a5150bdf241.css" /><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.css">
 		<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.js"></script>
 		<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/contrib/auto-render.min.js" onload="renderMathInElement(document.body);"></script>
 		<script>
@@ -78,14 +78,14 @@ $a \prec b$：连接性，传递性，非对称性
           无趣漫长的模板化严格化证明，靠直觉A题才是对的
         </div>
         <section class="body">
-          <h2 id="序理论">序理论：</h2>
-<h3 id="定义与stl">定义与STL：</h3>
-<h4 id="严格全序">严格全序：</h4>
+          <h2 id="序理论">序理论</h2>
+<h3 id="定义与stl">定义与STL</h3>
+<h4 id="严格全序">严格全序</h4>
 <p>$a \prec b$：连接性，传递性，非对称性</p>
 <p>用sort可求出唯一的序列，使得：任取序列前后两元素a，b，有$a \prec b$成立</p>
 <p>证明：建图，入度为0的点数始终为1，无环，拓扑序存在</p>
 <p>或：m在序列中的位置：$n \prec m$，成立的n的个数+1</p>
-<h4 id="弱序">弱序：</h4>
+<h4 id="弱序">弱序</h4>
 <p>$a \preceq b$：连接性，传递性</p>
 <p>注意：存在等价关系：$a\sim b : a \preceq b且b \preceq a$（传递性，对称性）</p>
 <p>用sort可求出序列，使得：任取序列前后两元素a，b，有$a \preceq b$成立</p>
@@ -94,9 +94,9 @@ $a \prec b$：连接性，传递性，非对称性
 <ul>
 <li>Attention：STL的<code>sort</code>自定义序关系需定义成严格全序，等价元素需返回0（否则会越界），其会给出一种可行的序列（具有稳定性）</li>
 </ul>
-<h2 id="微扰贪心">微扰贪心：</h2>
+<h2 id="微扰贪心">微扰贪心</h2>
 <p>做法易想，但严格证明是不显然的</p>
-<h3 id="一种可能的类型">一种可能的类型：</h3>
+<h3 id="一种可能的类型">一种可能的类型</h3>
 <p>求序列$\{a_n\}$使得$f(\{a_n\})$最大</p>
 <p>记关系$a \preceq b$为交换序列中相邻的ab，f()不增大（存在等价关系）</p>
 <p>最优序列：A：对于其中任意相邻两项有$a \preceq b$成立</p>

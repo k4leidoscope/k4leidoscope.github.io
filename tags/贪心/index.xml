@@ -14,7 +14,7 @@
       <link>https://k4leidoscope.github.io/posts/%E5%BA%8F%E7%90%86%E8%AE%BA%E4%B8%8E%E5%BE%AE%E6%89%B0%E8%B4%AA%E5%BF%83/</link>
       <pubDate>Thu, 23 Oct 2025 20:42:22 +0800</pubDate>
       <guid>https://k4leidoscope.github.io/posts/%E5%BA%8F%E7%90%86%E8%AE%BA%E4%B8%8E%E5%BE%AE%E6%89%B0%E8%B4%AA%E5%BF%83/</guid>
-      <description>&lt;h2 id=&#34;序理论&#34;&gt;序理论：&lt;/h2&gt;&#xA;&lt;h3 id=&#34;定义与stl&#34;&gt;定义与STL：&lt;/h3&gt;&#xA;&lt;h4 id=&#34;严格全序&#34;&gt;严格全序：&lt;/h4&gt;&#xA;&lt;p&gt;$a \prec b$：连接性，传递性，非对称性&lt;/p&gt;&#xA;&lt;p&gt;用sort可求出唯一的序列，使得：任取序列前后两元素a，b，有$a \prec b$成立&lt;/p&gt;</description>
+      <description>&lt;h2 id=&#34;序理论&#34;&gt;序理论&lt;/h2&gt;&#xA;&lt;h3 id=&#34;定义与stl&#34;&gt;定义与STL&lt;/h3&gt;&#xA;&lt;h4 id=&#34;严格全序&#34;&gt;严格全序&lt;/h4&gt;&#xA;&lt;p&gt;$a \prec b$：连接性，传递性，非对称性&lt;/p&gt;&#xA;&lt;p&gt;用sort可求出唯一的序列，使得：任取序列前后两元素a，b，有$a \prec b$成立&lt;/p&gt;</description>
     </item>
     <item>
       <title>练习1-P2672</title>

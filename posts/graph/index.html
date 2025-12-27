@@ -2,38 +2,12 @@
 <html><head lang="en">
 	<meta charset="utf-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>图论 - 碎片</title><meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="description" content="存图
-
-邻接矩阵:查找&#43;稠密图 可用于矩乘递推
-邻接表:遍历 预排序可将查询优化至O(logm)
-链式前向星:遍历&#43;可储存边的信息 每个节点对应一个链表串联起储存的边
-
-struct edge {
-  int u, v, w;
-};
-
-vector&lt;int&gt; head(n &#43; 1, -1), e, nxt;
-
-// 链表储存对应元素下标
-
-void add_edge(int u, int v, int w) {
-  e.ep({u, v, w});
-  nxt.ep(head[u]);
-  // 同时扩增,下标一致性
-  head[u] = e.size() - 1;
-}
-
-for (int i = head[u]; ~i; i = nxt[i]) { // ~i相当于i!=-1
-  cout &lt;&lt; e[i].u &lt;&lt; &#34; &#34; &lt;&lt; e[i].v &lt;&lt; &#34; &#34; e[i].v;
-}
-// 遍历链表(e对应下标)
-// 链表初始是-1,不断从开头扩展链表,故最终遍历到-1结束
-" />
+	<meta name="description" content="图论理论学习" />
 	<meta property="og:image" content=""/>
 	<meta property="og:url" content="https://k4leidoscope.github.io/posts/graph/">
   <meta property="og:site_name" content="碎片">
   <meta property="og:title" content="图论">
-  <meta property="og:description" content="存图 邻接矩阵:查找&#43;稠密图 可用于矩乘递推 邻接表:遍历 预排序可将查询优化至O(logm) 链式前向星:遍历&#43;可储存边的信息 每个节点对应一个链表串联起储存的边 struct edge { int u, v, w; }; vector&lt;int&gt; head(n &#43; 1, -1), e, nxt; // 链表储存对应元素下标 void add_edge(int u, int v, int w) { e.ep({u, v, w}); nxt.ep(head[u]); // 同时扩增,下标一致性 head[u] = e.size() - 1; } for (int i = head[u]; ~i; i = nxt[i]) { // ~i相当于i!=-1 cout &lt;&lt; e[i].u &lt;&lt; &#34; &#34; &lt;&lt; e[i].v &lt;&lt; &#34; &#34; e[i].v; } // 遍历链表(e对应下标) // 链表初始是-1,不断从开头扩展链表,故最终遍历到-1结束">
+  <meta property="og:description" content="图论理论学习">
   <meta property="og:locale" content="zh_cn">
   <meta property="og:type" content="article">
     <meta property="article:section" content="posts">
@@ -44,13 +18,13 @@ for (int i = head[u]; ~i; i = nxt[i]) { // ~i相当于i!=-1
 
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="图论">
-  <meta name="twitter:description" content="存图 邻接矩阵:查找&#43;稠密图 可用于矩乘递推 邻接表:遍历 预排序可将查询优化至O(logm) 链式前向星:遍历&#43;可储存边的信息 每个节点对应一个链表串联起储存的边 struct edge { int u, v, w; }; vector&lt;int&gt; head(n &#43; 1, -1), e, nxt; // 链表储存对应元素下标 void add_edge(int u, int v, int w) { e.ep({u, v, w}); nxt.ep(head[u]); // 同时扩增,下标一致性 head[u] = e.size() - 1; } for (int i = head[u]; ~i; i = nxt[i]) { // ~i相当于i!=-1 cout &lt;&lt; e[i].u &lt;&lt; &#34; &#34; &lt;&lt; e[i].v &lt;&lt; &#34; &#34; e[i].v; } // 遍历链表(e对应下标) // 链表初始是-1,不断从开头扩展链表,故最终遍历到-1结束">
+  <meta name="twitter:description" content="图论理论学习">
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@1,500&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
 
 	
-	<link rel="stylesheet" type="text/css" media="screen" href="https://k4leidoscope.github.io/css/main.e00e2acdcecae8eb0d16d8c5f8ef4a44429b2c6463fc07b144b4296e82dc7973.css" /><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.css">
+	<link rel="stylesheet" type="text/css" media="screen" href="https://k4leidoscope.github.io/css/main.2c816e5b87086af353368b913c521905f676d8a5b67a494589639a5150bdf241.css" /><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.css">
 		<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.js"></script>
 		<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/contrib/auto-render.min.js" onload="renderMathInElement(document.body);"></script>
 		<script>
@@ -140,6 +114,15 @@ for (int i = head[u]; ~i; i = nxt[i]) { // ~i相当于i!=-1
       </div>
 
       
+      
+      <div class="toc">
+        <strong>Table of contents:</strong>
+        <nav id="TableOfContents">
+  <ol>
+    <li><a href="#存图">存图</a></li>
+  </ol>
+</nav>
+      </div>
       
     </div>
 
