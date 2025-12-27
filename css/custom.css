@@ -1,0 +1,15 @@
+/* 针对所有代码块区域的选中样式修复 */
+pre code::selection,
+pre span::selection,
+code::selection {
+    background-color: #b3d4fc !important; /* 浅蓝色背景 */
+    color: #000000 !important;          /* 黑色文字，确保对比度 */
+}
+
+/* 针对 Firefox 浏览器的兼容写法 */
+pre code::-moz-selection,
+pre span::-moz-selection,
+code::-moz-selection {
+    background-color: #b3d4fc !important;
+    color: #000000 !important;
+}
