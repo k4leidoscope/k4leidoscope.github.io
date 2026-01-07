@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>序理论 on 碎片</title>
-    <link>https://k4leidoscope.github.io/tags/%E5%BA%8F%E7%90%86%E8%AE%BA/</link>
+    <link>https://muyuf.top/tags/%E5%BA%8F%E7%90%86%E8%AE%BA/</link>
     <description>Recent content in 序理论 on 碎片</description>
     <generator>Hugo</generator>
     <language>zh-cn</language>
     <copyright>Kaleidoscope</copyright>
     <lastBuildDate>Thu, 23 Oct 2025 20:42:22 +0800</lastBuildDate>
-    <atom:link href="https://k4leidoscope.github.io/tags/%E5%BA%8F%E7%90%86%E8%AE%BA/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://muyuf.top/tags/%E5%BA%8F%E7%90%86%E8%AE%BA/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>序理论与微扰贪心</title>
-      <link>https://k4leidoscope.github.io/posts/%E5%BA%8F%E7%90%86%E8%AE%BA%E4%B8%8E%E5%BE%AE%E6%89%B0%E8%B4%AA%E5%BF%83/</link>
+      <link>https://muyuf.top/posts/%E5%BA%8F%E7%90%86%E8%AE%BA%E4%B8%8E%E5%BE%AE%E6%89%B0%E8%B4%AA%E5%BF%83/</link>
       <pubDate>Thu, 23 Oct 2025 20:42:22 +0800</pubDate>
-      <guid>https://k4leidoscope.github.io/posts/%E5%BA%8F%E7%90%86%E8%AE%BA%E4%B8%8E%E5%BE%AE%E6%89%B0%E8%B4%AA%E5%BF%83/</guid>
+      <guid>https://muyuf.top/posts/%E5%BA%8F%E7%90%86%E8%AE%BA%E4%B8%8E%E5%BE%AE%E6%89%B0%E8%B4%AA%E5%BF%83/</guid>
       <description>&lt;h2 id=&#34;序理论&#34;&gt;序理论&lt;/h2&gt;&#xA;&lt;h3 id=&#34;定义与stl&#34;&gt;定义与STL&lt;/h3&gt;&#xA;&lt;h4 id=&#34;严格全序&#34;&gt;严格全序&lt;/h4&gt;&#xA;&lt;p&gt;$a \prec b$：连接性，传递性，非对称性&lt;/p&gt;&#xA;&lt;p&gt;用sort可求出唯一的序列，使得：任取序列前后两元素a，b，有$a \prec b$成立&lt;/p&gt;</description>
     </item>
   </channel>

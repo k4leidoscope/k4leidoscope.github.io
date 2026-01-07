@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>记录 on 碎片</title>
-    <link>https://k4leidoscope.github.io/tags/%E8%AE%B0%E5%BD%95/</link>
+    <link>https://muyuf.top/tags/%E8%AE%B0%E5%BD%95/</link>
     <description>Recent content in 记录 on 碎片</description>
     <generator>Hugo</generator>
     <language>zh-cn</language>
     <copyright>Kaleidoscope</copyright>
     <lastBuildDate>Tue, 09 Dec 2025 20:19:16 +0800</lastBuildDate>
-    <atom:link href="https://k4leidoscope.github.io/tags/%E8%AE%B0%E5%BD%95/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://muyuf.top/tags/%E8%AE%B0%E5%BD%95/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>BCPC-2025 游记</title>
-      <link>https://k4leidoscope.github.io/posts/bcpc-2025/</link>
+      <link>https://muyuf.top/posts/bcpc-2025/</link>
       <pubDate>Tue, 09 Dec 2025 20:19:16 +0800</pubDate>
-      <guid>https://k4leidoscope.github.io/posts/bcpc-2025/</guid>
+      <guid>https://muyuf.top/posts/bcpc-2025/</guid>
       <description>&lt;h2&gt;$Day:-X$&lt;/h2&gt;&#xA;&lt;p&gt;做完预赛的题目&lt;/p&gt;&#xA;&lt;p&gt;排名中等,大🐍还是太多了&lt;/p&gt;&#xA;&lt;h2&gt;$Day: ？$&lt;/h2&gt;&#xA;&lt;p&gt;打完决赛,rank依旧中等(水平就这样)&lt;/p&gt;&#xA;&lt;p&gt;A读错题面,卡了会儿&lt;/p&gt;&#xA;&lt;p&gt;B简单构造,C简单搜索&lt;/p&gt;&#xA;&lt;p&gt;D感觉可以DP,搞了一会儿,不会&lt;/p&gt;&#xA;&lt;p&gt;E发现缩减速率和GCD是一样的,log级别,直接模拟就行&lt;/p&gt;&#xA;&lt;p&gt;剩下的题目:不会&lt;/p&gt;&#xA;&lt;p&gt;颁奖典礼直接遁逃&lt;/p&gt;&#xA;&lt;p&gt;草草结束&lt;/p&gt;&#xA;&lt;h2&gt;$Day: ?? $&lt;/h2&gt;&#xA;&lt;p&gt;期末填竞赛参与情况时发现是最后一个三等奖,有点好笑&lt;/p&gt;</description>
     </item>
   </channel>
