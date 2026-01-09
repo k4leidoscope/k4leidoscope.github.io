@@ -2,11 +2,11 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on 碎片</title>
-    <link>https://muyuf.top/categories/</link>
+    <link>https://myuf.top/categories/</link>
     <description>Recent content in Categories on 碎片</description>
     <generator>Hugo</generator>
     <language>zh-cn</language>
     <copyright>Kaleidoscope</copyright>
-    <atom:link href="https://muyuf.top/categories/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://myuf.top/categories/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

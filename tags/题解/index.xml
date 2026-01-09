@@ -2,25 +2,25 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>题解 on 碎片</title>
-    <link>https://muyuf.top/tags/%E9%A2%98%E8%A7%A3/</link>
+    <link>https://myuf.top/tags/%E9%A2%98%E8%A7%A3/</link>
     <description>Recent content in 题解 on 碎片</description>
     <generator>Hugo</generator>
     <language>zh-cn</language>
     <copyright>Kaleidoscope</copyright>
     <lastBuildDate>Tue, 28 Oct 2025 11:28:14 +0800</lastBuildDate>
-    <atom:link href="https://muyuf.top/tags/%E9%A2%98%E8%A7%A3/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://myuf.top/tags/%E9%A2%98%E8%A7%A3/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>零散思绪</title>
-      <link>https://muyuf.top/posts/%E9%9B%B6%E6%95%A3%E5%86%85%E5%AE%B9/</link>
+      <link>https://myuf.top/posts/%E9%9B%B6%E6%95%A3%E5%86%85%E5%AE%B9/</link>
       <pubDate>Tue, 28 Oct 2025 11:28:14 +0800</pubDate>
-      <guid>https://muyuf.top/posts/%E9%9B%B6%E6%95%A3%E5%86%85%E5%AE%B9/</guid>
+      <guid>https://myuf.top/posts/%E9%9B%B6%E6%95%A3%E5%86%85%E5%AE%B9/</guid>
       <description>&lt;h2 id=&#34;cf2156b&#34;&gt;&lt;a href=&#34;https://codeforces.com/contest/2156/problem/B&#34;&gt;CF2156B:&lt;/a&gt;&lt;/h2&gt;</description>
     </item>
     <item>
       <title>练习1-P2672</title>
-      <link>https://muyuf.top/posts/%E7%BB%83%E4%B9%A0-1-p2672/</link>
+      <link>https://myuf.top/posts/%E7%BB%83%E4%B9%A0-1-p2672/</link>
       <pubDate>Mon, 20 Oct 2025 20:50:12 +0000</pubDate>
-      <guid>https://muyuf.top/posts/%E7%BB%83%E4%B9%A0-1-p2672/</guid>
+      <guid>https://myuf.top/posts/%E7%BB%83%E4%B9%A0-1-p2672/</guid>
       <description>&lt;ul&gt;&#xA;&lt;li&gt;Link: &lt;a href=&#34;https://www.luogu.com.cn/problem/P2672&#34;&gt;https://www.luogu.com.cn/problem/P2672&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;贪心策略证明&#34;&gt;贪心策略证明：&lt;/h2&gt;&#xA;&lt;p&gt;总疲劳值=选取的住户疲劳值之和+最远端路程疲劳值&lt;/p&gt;&#xA;&lt;p&gt;按住户疲劳值排序，选前X的住户得到方案I&lt;/p&gt;</description>
     </item>
   </channel>

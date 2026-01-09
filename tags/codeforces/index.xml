@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Codeforces on 碎片</title>
-    <link>https://muyuf.top/tags/codeforces/</link>
+    <link>https://myuf.top/tags/codeforces/</link>
     <description>Recent content in Codeforces on 碎片</description>
     <generator>Hugo</generator>
     <language>zh-cn</language>
     <copyright>Kaleidoscope</copyright>
     <lastBuildDate>Tue, 28 Oct 2025 11:28:14 +0800</lastBuildDate>
-    <atom:link href="https://muyuf.top/tags/codeforces/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://myuf.top/tags/codeforces/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>零散思绪</title>
-      <link>https://muyuf.top/posts/%E9%9B%B6%E6%95%A3%E5%86%85%E5%AE%B9/</link>
+      <link>https://myuf.top/posts/%E9%9B%B6%E6%95%A3%E5%86%85%E5%AE%B9/</link>
       <pubDate>Tue, 28 Oct 2025 11:28:14 +0800</pubDate>
-      <guid>https://muyuf.top/posts/%E9%9B%B6%E6%95%A3%E5%86%85%E5%AE%B9/</guid>
+      <guid>https://myuf.top/posts/%E9%9B%B6%E6%95%A3%E5%86%85%E5%AE%B9/</guid>
       <description>&lt;h2 id=&#34;cf2156b&#34;&gt;&lt;a href=&#34;https://codeforces.com/contest/2156/problem/B&#34;&gt;CF2156B:&lt;/a&gt;&lt;/h2&gt;</description>
     </item>
   </channel>
