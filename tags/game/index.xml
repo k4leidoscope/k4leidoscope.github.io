@@ -11,9 +11,9 @@
     <atom:link href="https://myuf.top/tags/game/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>&#34;A=B&#34;试玩</title>
-      <link>https://myuf.top/posts/a-b%E8%AF%95%E7%8E%A9/</link>
+      <link>https://myuf.top/old_passages/a-b%E8%AF%95%E7%8E%A9/</link>
       <pubDate>Mon, 05 Jan 2026 23:14:57 +0800</pubDate>
-      <guid>https://myuf.top/posts/a-b%E8%AF%95%E7%8E%A9/</guid>
+      <guid>https://myuf.top/old_passages/a-b%E8%AF%95%E7%8E%A9/</guid>
       <description>&lt;p&gt;$A=B$语言:核心是字符替换语句(马尔可夫算法),并额外引入了&lt;code&gt;(return)&lt;/code&gt; &lt;code&gt;(print)&lt;/code&gt; &lt;code&gt;(end)&lt;/code&gt;的特殊语法&lt;/p&gt;&#xA;&lt;p&gt;可以证明该语言的图灵完备性&lt;/p&gt;&#xA;&lt;p&gt;游戏主体是难度渐增的编程任务:用$A=B$语言实现指定逻辑&lt;/p&gt;&#xA;&lt;p&gt;个人认为这玩意儿还是设计成网页小游戏较为合理$^†$ (steam余额-22)&lt;/p&gt;&#xA;&lt;h2 id=&#34;关卡推进&#34;&gt;关卡推进&lt;/h2&gt;&#xA;&lt;h3 id=&#34;chapter-1&#34;&gt;Chapter 1&lt;/h3&gt;&#xA;&lt;p&gt;较为简单,最复杂的也仅涉及冒泡排序的思想&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Fun Fact: 由于缺乏相关数据集,AI在第一关连犯几个低级错误,这种基于已有数据的推测机终归是没有本质的理解能力&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;chapter-2&#34;&gt;Chapter 2&lt;/h3&gt;&#xA;&lt;p&gt;略有难度,逐渐需要一定思考了&lt;/p&gt;&#xA;&lt;p&gt;正在游玩中,进度:5/9&lt;/p&gt;&#xA;&lt;br&gt;&#xA;&lt;hr&gt;&#xA;&lt;p&gt;&lt;font face=&#39;Noto Serif SC&#39;&gt;$^†$实际上作者设置有挑战网址: &lt;a href=&#34;https://mao.snuke.org/&#34;&gt;Markov Algorithm Online&lt;/a&gt;&lt;/font&gt;&lt;/p&gt;</description>
     </item>
   </channel>

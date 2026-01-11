@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html><head lang="en">
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>序理论与微扰贪心 - 碎片</title><meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="序理论
+定义与STL
+严格全序
+$a \prec b$：连接性，传递性，非对称性
+用sort可求出唯一的序列，使得：任取序列前后两元素a，b，有$a \prec b$成立" />
+	<meta property="og:image" content=""/>
+	<meta property="og:url" content="https://myuf.top/old_passages/%E5%BA%8F%E7%90%86%E8%AE%BA%E4%B8%8E%E5%BE%AE%E6%89%B0%E8%B4%AA%E5%BF%83/">
+  <meta property="og:site_name" content="碎片">
+  <meta property="og:title" content="序理论与微扰贪心">
+  <meta property="og:description" content="序理论 定义与STL 严格全序 $a \prec b$：连接性，传递性，非对称性
+用sort可求出唯一的序列，使得：任取序列前后两元素a，b，有$a \prec b$成立">
+  <meta property="og:locale" content="zh_cn">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="old_passages">
+    <meta property="article:published_time" content="2025-10-23T20:42:22+08:00">
+    <meta property="article:modified_time" content="2025-10-23T20:42:22+08:00">
+    <meta property="article:tag" content="贪心">
+    <meta property="article:tag" content="序理论">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="序理论与微扰贪心">
+  <meta name="twitter:description" content="序理论 定义与STL 严格全序 $a \prec b$：连接性，传递性，非对称性
+用sort可求出唯一的序列，使得：任取序列前后两元素a，b，有$a \prec b$成立">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@1,500&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
+
+	
+	<link rel="stylesheet" type="text/css" media="screen" href="https://myuf.top/css/main.2c816e5b87086af353368b913c521905f676d8a5b67a494589639a5150bdf241.css" /><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.css">
+		<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.js"></script>
+		<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/contrib/auto-render.min.js" onload="renderMathInElement(document.body);"></script>
+		<script>
+			document.addEventListener("DOMContentLoaded", function() {
+					renderMathInElement(document.body, {
+							delimiters: [
+									{left: "$$", right: "$$", display: true},
+									{left: "$", right: "$", display: false}
+							]
+					});
+			});
+		</script>
+</head><body>
+        <div class="content"><header>
+
+	<div class="main">
+		<a href="https://myuf.top/">碎片</a>
+	</div>
+	<nav>
+		
+		<a href="/">Home</a>
+		
+		<a href="/posts">All posts</a>
+		
+		<a href="/about">About</a>
+		
+		<a href="/tags">Tags</a>
+		
+		
+	</nav>
+</header>
+
+<main>
+  <article>
+    <div class="post-container">
+      
+      <div class="post-content">
+        <div class="title">
+          <h1 class="title">序理论与微扰贪心</h1>
+          <div class="meta">Posted on Oct 23, 2025</div>
+        </div>
+        
+        <div class="tldr">
+          <strong>tl;dr:</strong>
+          无趣漫长的模板化严格化证明，靠直觉A题才是对的
+        </div>
+        <section class="body">
+          <h2 id="序理论">序理论</h2>
+<h3 id="定义与stl">定义与STL</h3>
+<h4 id="严格全序">严格全序</h4>
+<p>$a \prec b$：连接性，传递性，非对称性</p>
+<p>用sort可求出唯一的序列，使得：任取序列前后两元素a，b，有$a \prec b$成立</p>
+<p>证明：建图，入度为0的点数始终为1，无环，拓扑序存在</p>
+<p>或：m在序列中的位置：$n \prec m$，成立的n的个数+1</p>
+<h4 id="弱序">弱序</h4>
+<p>$a \preceq b$：连接性，传递性</p>
+<p>注意：存在等价关系：$a\sim b : a \preceq b且b \preceq a$（传递性，对称性）</p>
+<p>用sort可求出序列，使得：任取序列前后两元素a，b，有$a \preceq b$成立</p>
+<p>且等价元素相邻，交换等价元素，仍是有效的数列</p>
+<p>证明：建图，等价元素用一个点表示，点之间用有向边代表各自等价元素的关系，此时图中点的建边关系构成严格全序，沿用之前的证明即可</p>
+<ul>
+<li>Attention：STL的<code>sort</code>自定义序关系需定义成严格全序，等价元素需返回0（否则会越界），其会给出一种可行的序列（具有稳定性）</li>
+</ul>
+<h2 id="微扰贪心">微扰贪心</h2>
+<p>做法易想，但严格证明是不显然的</p>
+<h3 id="一种可能的类型">一种可能的类型</h3>
+<p>求序列$\{a_n\}$使得$f(\{a_n\})$最大</p>
+<p>记关系$a \preceq b$为交换序列中相邻的ab，f()不增大（存在等价关系）</p>
+<p>最优序列：A：对于其中任意相邻两项有$a \preceq b$成立</p>
+<p>若能证明$a \preceq b$是弱序关系（+连接性，传递性），根据上述理论，用sort可求出和A具有相同性质的序列B、</p>
+<p>再容易看出：交换等价项，A和B可相互得到，交换时f()不变，故f(A)=f(B)，B亦是最优的序列</p>
+<h3 id="eg-p1080-">Eg: <a href="https://www.luogu.com.cn/problem/P1080">P1080 [NOIP 2012 提高组] 国王游戏</a></h3>
+<ul>
+<li>题目中的舍弃取整的等价性是不显然的，但直觉表明舍弃是对的</li>
+<li>排序得到序列A，最优序列是序列B，需注意到B相邻的元素可能没有关系$\preceq$成立，A，B不是通过简单的交换等价项得到的，而是需要构造更复杂的整体max不变的交换方式（可以构造，懒得写了）</li>
+</ul>
+<p>？靠感觉：用<code>sort</code>交换相邻项，使所有局部都最优化，盲猜此时全局是最优的</p>
+        </section>
+        <div class="post-tags">
+          
+          
+          <nav class="nav tags">
+            <ul class="tags">
+              
+              <li><a href="/tags/%E8%B4%AA%E5%BF%83">贪心</a></li>
+              
+              <li><a href="/tags/%E5%BA%8F%E7%90%86%E8%AE%BA">序理论</a></li>
+              
+            </ul>
+          </nav>
+          
+          
+        </div>
+      </div>
+
+      
+      
+    </div>
+
+    </article>
+</main>
+<footer>
+  <div style="display:flex"><a class="soc" href="https://github.com/K4leidoscope" rel="me" title="GitHub"><svg class="feather">
+       <use href="/svg/feather-sprite.51cf5647cb1987f769b616558f2620fd9423d72058490231b391bf6aa3744b55.svg#github" />
+    </svg></a><a class="border"></a><a class="soc" href="https://codeforces.com/" rel="me" title="GitLab"><svg class="feather">
+       <use href="/svg/feather-sprite.51cf5647cb1987f769b616558f2620fd9423d72058490231b391bf6aa3744b55.svg#code" />
+    </svg></a><a class="border"></a></div>
+  <div class="footer-info">
+    2026  Kaleidoscope |  <a
+      href="https://github.com/athul/archie">Archie Theme</a> | Built with <a href="https://gohugo.io">Hugo</a>
+  </div>
+</footer>
+
+
+
+</div>
+    </body>
+</html>

@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>碎片</title>
-    <link>https://myuf.top/</link>
-    <description>Recent content on 碎片</description>
+    <title>Old_passages on 碎片</title>
+    <link>https://myuf.top/old_passages/</link>
+    <description>Recent content in Old_passages on 碎片</description>
     <generator>Hugo</generator>
     <language>zh-cn</language>
     <copyright>Kaleidoscope</copyright>
     <lastBuildDate>Mon, 05 Jan 2026 23:14:57 +0800</lastBuildDate>
-    <atom:link href="https://myuf.top/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://myuf.top/old_passages/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>&#34;A=B&#34;试玩</title>
       <link>https://myuf.top/old_passages/a-b%E8%AF%95%E7%8E%A9/</link>
@@ -94,13 +94,6 @@
       <description>&lt;p&gt;人类对世界的理解就是命名&lt;/p&gt;&#xA;&lt;p&gt;用符号对抽象的，具象的一切命名&lt;/p&gt;&#xA;&lt;p&gt;命名的实质是建立事物和符号的一一对应&lt;/p&gt;</description>
     </item>
     <item>
-      <title>About</title>
-      <link>https://myuf.top/about/</link>
-      <pubDate>Wed, 22 Oct 2025 00:00:00 +0000</pubDate>
-      <guid>https://myuf.top/about/</guid>
-      <description>&lt;p&gt;student from Beihang University&lt;/p&gt;</description>
-    </item>
-    <item>
       <title>模板</title>
       <link>https://myuf.top/old_passages/%E6%A8%A1%E6%9D%BF%E6%95%B4%E7%90%86/</link>
       <pubDate>Tue, 21 Oct 2025 17:20:38 +0000</pubDate>
@@ -113,13 +106,6 @@
       <pubDate>Mon, 20 Oct 2025 20:50:12 +0000</pubDate>
       <guid>https://myuf.top/old_passages/%E7%BB%83%E4%B9%A0-1-p2672/</guid>
       <description>&lt;ul&gt;&#xA;&lt;li&gt;Link: &lt;a href=&#34;https://www.luogu.com.cn/problem/P2672&#34;&gt;https://www.luogu.com.cn/problem/P2672&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;贪心策略证明&#34;&gt;贪心策略证明：&lt;/h2&gt;&#xA;&lt;p&gt;总疲劳值=选取的住户疲劳值之和+最远端路程疲劳值&lt;/p&gt;&#xA;&lt;p&gt;按住户疲劳值排序，选前X的住户得到方案I&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title></title>
-      <link>https://myuf.top/archives/</link>
-      <pubDate>Tue, 28 May 2019 00:00:00 +0000</pubDate>
-      <guid>https://myuf.top/archives/</guid>
-      <description></description>
     </item>
   </channel>
 </rss>
